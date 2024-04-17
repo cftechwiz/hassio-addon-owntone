@@ -36,6 +36,7 @@ audio: true
 ingress_port: 3689
 webui: http://[HOST]:[PORT:3689]/
 startup: application
+init: false
 boot: auto
 #image: linuxserver/daapd
 options:

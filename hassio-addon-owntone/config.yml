@@ -1,12 +1,11 @@
----
 name: Owntone server
-version: 28.2.20211118
+version: 28.9.20240417
 slug: owntone-server
 description: OwnTone is a Linux/FreeBSD DAAP (iTunes) media server with support for AirPlay devices, Apple Remote (and compatibles), MPD, Spotify, Chromecast, mp3 streaming and internet radio. It allows you to share your music collection over the local network.
 arch:
-  - armv7
-  - aarch64
-  - amd64
+- armv7
+- aarch64
+- amd64
 ports:
   3688/tcp: 3688
   6600/tcp: 6600
@@ -25,7 +24,7 @@ ports_description:
 map:
 #  - config:rw
 #  - media:rw
-  - share:rw
+- share:rw
 host_network: false
 host_dbus: false
 host_ipc: false
@@ -39,15 +38,15 @@ webui: http://[HOST]:[PORT:3689]/
 startup: application
 boot: auto
 #image: linuxserver/daapd
-options: 
+options:
   general:
     admin_password: ''
     loglevel: log
     trusted_networks:
-      - 'localhost'
-      - '192.168'
-      - '172.17'
-      - '172.30'
+    - 'localhost'
+    - '192.168'
+    - '172.17'
+    - '172.30'
   library:
     name: 'Hassio music'
     password: ''
@@ -77,13 +76,13 @@ schema:
     itunes_overrides: bool?
     itunes_smartpl: bool?
   airplay:
-    - name: str
-      max_volume: int?
-      permanent: bool?
-      exclude: bool?
-      password: password?
-      raop_disable: bool?
-      nickname: str?
+  - name: str
+    max_volume: int?
+    permanent: bool?
+    exclude: bool?
+    password: password?
+    raop_disable: bool?
+    nickname: str?
 
   spotify:
     use_libspotify: bool?
@@ -95,7 +94,7 @@ schema:
     album_override: bool?
 
   chromecast:
-    - name: str
-      max_volume: int?
-      exclude: bool?
-      nickname: str?
+  - name: str
+    max_volume: int?
+    exclude: bool?
+    nickname: str?

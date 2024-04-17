@@ -16,7 +16,7 @@ chown -R abc:abc /share/owntone/dbase_and_logs /share/owntone /share/owntone/mus
 
 
 OPTIONS_PATH=/data/options.json
-CONFIG_PATH=/etc/owntone.conf
+CONFIG_PATH=/config/owntone.conf
 
 cp /config/owntone.conf $CONFIG_PATH
 
